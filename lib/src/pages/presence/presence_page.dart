@@ -9,8 +9,20 @@ class PresencePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Presence'),
       ),
-      body: const Center(
-        child: Text('Presence Page'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Presence Page'),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/camera');
+              },
+              child: const Text('Take Face Photo'),
+            ),
+          ],
+        ),
       ),
     );
   }
